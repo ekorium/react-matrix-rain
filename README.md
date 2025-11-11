@@ -1,9 +1,13 @@
 <h1>Matrix Rain</h1>
 
 A React component that renders a customizable matrix rain animation onto a canvas. It automatically scales with and fills 100% of parent. See https://ekorium.github.io/react-matrix-rain/ for a demo of how it looks with default settings. In order to use it, first install with:
-npm i react-matrix-rain
+
+    npm i react-matrix-rain
+
 Then import with:
-import MatrixRain from "react-matrix-rain"
+
+    import MatrixRain from "react-matrix-rain"
+
 This package currently only supports ESM modules, not CommonJS.
 
 <h2>Customization<h2>
