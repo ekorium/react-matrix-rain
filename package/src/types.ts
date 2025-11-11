@@ -11,26 +11,10 @@ export type Orientation = "horizontal" | "vertical";
 export type MatrixRainProps = {
 
   /**
-   * Horizontal resolution of the canvas.
-   * Too low value causes blur.
-   * 
-   * Omit for device screen width as default.
-   */
-  resolutionX?: number;
-
-  /**
-   * Vertical resolution of the canvas.
-   * Too low value causes blur.
-   * 
-   * Omit for device screen height as default.
-   */
-  resolutionY?: number;
-
-  /**
    * Color of the rendered text.
    * Using a gradient overrides this value.
    * 
-   * Default value is "#0f0" (green).
+   * Default value is "#00ff00" (green).
    */
   color?: Color;
 
@@ -60,7 +44,7 @@ export type MatrixRainProps = {
   /**
    * Color used to fill the background with.
    * 
-   * Default value is "#000" (black).
+   * Default value is "#000000" (black).
    */
   backgroundColor?: Color;
 
@@ -68,7 +52,7 @@ export type MatrixRainProps = {
    * String of all possible characters to be used.
    * Multiple of the same increases its probability.
    * 
-   * Leave empty for a default mix of katakana, english alphabet and digits.
+   * Leave empty for a default mix of katakana, latin letters and digits.
    */
   alphabet?: string;
 
@@ -80,14 +64,14 @@ export type MatrixRainProps = {
   font?: string;
 
   /**
-   * Extra horizontal space around each character, as a multiplier.
+   * Horizontal space around each character, as a multiplier.
    * 
    * Default value is 1.0 and leaves a little bit of space between them.
    */
   spaceX?: number;
 
   /**
-   * Extra vertical space around each character, as a multiplier.
+   * Vertical space around each character, as a multiplier.
    * 
    * Default value is 1.0 and leaves almost no space between them.
    */
@@ -123,6 +107,29 @@ export type MatrixRainProps = {
    * A value of 0 means nothing ever fades and 1 means no trail.
    */
   fadeRate?: number;
+
+  /**
+   * Horizontal resolution of the canvas.
+   * Too low value causes blur.
+   * 
+   * Omit for device screen width as default.
+   */
+  resolutionX?: number;
+
+  /**
+   * Vertical resolution of the canvas.
+   * Too low value causes blur.
+   * 
+   * Omit for device screen height as default.
+   */
+  resolutionY?: number;
+
+  /**
+   * The z-index of the canvas.
+   * 
+   * Default value is -1 to place it behind other elements.
+   */
+  zIndex?: number
 };
 
 export type MatrixRainState = {

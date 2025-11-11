@@ -7,13 +7,11 @@ const digits = "0123456789";
 const alphabet = katakana + latin + digits;
 
 export const defaultProps: Required<MatrixRainProps> = {
-  resolutionX: 0,
-  resolutionY: 0,
-  color: "#0f0",
+  color: "#00ff00",
   gradient: [],
   uniformGradient: [],
   gradientOrientation: "horizontal",
-  backgroundColor: "#000",
+  backgroundColor: "#000000",
   alphabet,
   font: "1.0rem monospace",
   spaceX: 1.0,
@@ -22,6 +20,9 @@ export const defaultProps: Required<MatrixRainProps> = {
   delay: 50,
   dryRate: 1.0,
   fadeRate: 0.1,
+  resolutionX: 0,
+  resolutionY: 0,
+  zIndex: -1,
 };
 
 export const defaultStyle: React.CSSProperties = {

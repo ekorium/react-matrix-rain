@@ -1,6 +1,6 @@
 {
   "name": "react-matrix-rain",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "description": "React canvas background component with customizable raining letters.",
   "module": "dist/index.js",

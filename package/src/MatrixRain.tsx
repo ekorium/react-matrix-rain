@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { defaultProps, defaultStyle } from "./defaults";
 
 import type {
@@ -11,12 +10,13 @@ import type {
 
 /**
  * Renders a customizable matrix rain animation onto a canvas.
- * Automatically scales with and fills 100% of parent.
+ * Scales with and fills 100% of its parent.
  */
 export default function MatrixRain(props: MatrixRainProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stateRef = useRef<MatrixRainState>(null);
   const mergedProps = { ...defaultProps, ...props };
+  const style = { ...defaultStyle, zIndex: mergedProps.zIndex };
 
   useEffect(() => {
     if (stateRef.current) {
@@ -36,7 +36,7 @@ export default function MatrixRain(props: MatrixRainProps) {
   return (
     <canvas
       ref={canvasRef}
-      style={defaultStyle}
+      style={style}
       width={props.resolutionX ?? screen.width}
       height={props.resolutionY ?? screen.height}
     />
@@ -119,10 +119,11 @@ function updateAnimationLoop(
 }
 
 function updateRainDrops(state: MatrixRainState): void {
-  const rainDropCount = state.density * state.gridCols * state.gridRows;
+  const targetRainDropCount = state.density * state.gridCols * state.gridRows;
+  const missingRainDropCount = targetRainDropCount - state.rainDrops.size;
   const dryProbability = state.dryRate / state.gridRows;
 
-  for (let i = 0; i < rainDropCount - state.rainDrops.size; i++) {
+  for (let i = 0; i < missingRainDropCount; i++) {
     if (Math.random() < state.density) {
       state.rainDrops.add({ x: randomRange(state.gridCols), y: -1 });
     }
@@ -204,8 +205,10 @@ function getColorGradient(
     return [{ offset: 0, color: props.color }];
   }
 
+  const baseOffset = 1 / Math.max(1, props.uniformGradient.length - 1);
+
   return props.uniformGradient.map((color, index) => ({
-    offset: index / Math.max(1, props.uniformGradient.length - 1),
+    offset: index * baseOffset,
     color,
   }));
 }
