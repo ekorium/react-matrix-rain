@@ -10,15 +10,15 @@ Then import with:
 
 This package currently only supports ESM modules, not CommonJS.
 
-<h2>Customization<h2>
+<h2>Customization</h2>
 Here's a complete list of all props to the component. All of them are optional and have default values.
 
-<h3>resolutionX<h3>>
+<h3>resolutionX</h3>
 Horizontal resolution of the canvas.
 Too low value causes blur.
 Omit for device screen width as default.
 
-<h3>resolutionY<h3>>
+<h3>resolutionY</h3>
 Vertical resolution of the canvas.
 Too low value causes blur.
 Omit for device screen height as default.
