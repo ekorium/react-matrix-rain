@@ -1,5 +1,5 @@
 # Matrix Rain
 
-A React component that renders a customizable matrix rain animation onto a canvas. It automatically scales with and fills 100% of its parent.
+A React component that renders a customizable matrix rain animation onto a canvas. It automatically scales with and fills 100% of its parent. This package has full TypeScript support but currently only supports ESM modules, not CommonJS.
 
-See https://github.com/ekorium/react-matrix-rain for more info.
+> See https://github.com/ekorium/react-matrix-rain for more info.
