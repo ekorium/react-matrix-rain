@@ -10,8 +10,12 @@
     "build": "tsc"
   },
   "keywords": ["react", "canvas", "matrix", "background", "animation"],
-  "author": "Ekorium",
+  "author": "Ekorium ",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ekorium/react-matrix-rain.git"
+  },
   "devDependencies": {
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
