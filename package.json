@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "update": "npm --prefix package run build && npm --prefix demo install",
+    "build": "npm run update && npm --prefix demo run build",
+    "dev": "npm --prefix demo run dev"
+  }
+}

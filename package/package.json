@@ -1,0 +1,23 @@
+{
+  "name": "react-matrix-rain",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "React canvas background component with customizable raining letters.",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["react", "canvas", "matrix", "background", "animation"],
+  "author": "Ekorium",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  }
+}
